@@ -22,15 +22,19 @@ A flashcards app to help bootcampers revise the material from the course:
 
 #### Morning
 
-- Create low-fidelity wireframe
-- Brainstorm structure of app and create user-flow diagram
-- Mobile-first design
-- Decide on daily schedule
+- Create low-fidelity wireframe - DONE.
+- Brainstorm structure of app and create user-flow diagram - DONE.
+- Mobile-first design - DONE.
+- Decide on daily schedule - DONE.
 
 #### Afternoon
 
-- Plan out components for front end
-- Spin up a blank react project and host on netlify ready for continuous deployment
+- Plan out components for front end - DONE.
+- Spin up a blank react project and host on netlify ready for continuous deployment - DONE.
+- Set up our database on Heroku.
+- Populate database with questions and answers.
+- Set up environment variables.
+- Research how to connect backend to frontend in React.
 
   - Component Tree:
     - Home Page
