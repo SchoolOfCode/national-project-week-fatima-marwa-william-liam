@@ -1,7 +1,125 @@
 # Questions/Answers
 
 ## HTML - Fatima
+<!-- 1. What does HTML stand for?
+Hyper Text Markup Language  
 
+2. Who is making the Web standards?
+The World Wide Web Consortium  
+
+3. What is the correct HTML element for the largest heading?
+<h1>
+
+4. What is the correct HTML element for inserting a line break?
+<br>
+
+5. What is the correct HTML for adding a background color?
+<body style="background-color:yellow;">  
+
+6. What is the correct HTML element to define important text?
+<strong>
+
+7. What is the correct HTML element to define emphasized text?
+<em>  
+
+8. What is the correct HTML for creating a hyperlink?
+<a href="http://www.w3schools.com">W3Schools</a> 
+
+9. Which character is used to indicate an end tag?
+/  
+
+10. How can you open a link in a new tab/browser window?
+<a href="url" target="_blank">  
+
+11. Which element is used to define row of cells in table?
+<tr>
+
+12. Inline elements are normally displayed without starting a new line, true or false?
+True
+
+13. How can you make a numbered list?
+<ol></ol>
+
+14. How can you make a bulleted list?
+<ul></ul>
+
+15. What is the correct HTML for making a checkbox?
+<input type=“checkbox”>
+
+16. What is the correct HTML for making a text input field?
+<input type="text">  
+
+17. What is the correct HTML for making a drop-down list?
+<select>
+
+18. What is the correct HTML for making a text area?
+<textarea>
+
+19. What is the correct HTML for inserting an image?
+<img src="image.gif" alt="MyImage">  
+
+20. What is the correct HTML for inserting a background image?
+<body style="background-image:url(background.gif)">  
+
+21. An <iframe> is used to display a web page within a web page, true or false?
+True
+
+22. HTML comments start with <!-- and end with —>, true or false?
+True
+
+23. Block elements are normally displayed without starting a new line, true or false?
+False
+
+24. Which HTML element defines the title of a document?
+<title>
+
+25. Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?
+alt
+
+26. What is the correct doctype for HTML5?
+<!DOCTYPE html>
+
+27. Which HTML element is used to specify a footer for a document or section?
+<footer>
+
+28. In HTML, you can embed SVG elements directly into an HTML page, true or false?
+True
+
+29. What is the correct HTML element for playing video files?
+<video>
+
+30. What is the correct HTML element for playing audio files?
+<audio>
+
+31. The HTML global attribute, "contenteditable" is used to specify whether the content of an element should be editable or not, true or false?
+True
+
+32. In HTML, onblur and onfocus are which type of attributes?
+Event attributes 
+
+33. Graphics defined by SVG is in which format?
+XML
+
+34. What is the HTML <canvas> element used for?
+To draw graphics
+
+35. In HTML, which attribute is used to specify that an input field must be filled out?
+required
+
+36. Which input type defines a slider control?
+range
+
+37. Which HTML element is used to display a scalar measurement within a range?
+<meter>
+
+38. Which HTML element defines navigation links?
+<nav>
+
+39. In HTML, what does the <aside> element define?
+Content aside from the page content  
+
+40. Which HTML element is used to specify a header for a document or section?
+<header> -->
 ## CSS - Will
 
 <!-- Question 1:
