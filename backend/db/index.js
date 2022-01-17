@@ -1,7 +1,7 @@
-import { Pool } from "pg";
-import * as config from "../config";
+import pg from "pg";
+import * as config from "../config.js";
 
-const pool = new Pool({
+const pool = new pg.Pool({
   user: config.user,
   host: config.host,
   database: config.database,
