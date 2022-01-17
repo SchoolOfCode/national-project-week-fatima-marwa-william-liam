@@ -1,7 +1,8 @@
 import express from "express";
-
 import cors from "cors";
 import logger from "morgan";
+
+import { query } from "./db/index";
 
 const app = express();
 
@@ -15,9 +16,7 @@ app.get("/css", function (req, res) {
 });
 
 app.use(function (req, res, next) {
-  res
-    .status(404)
-    .json({ message: "We couldn't find what you were looking for 😞" });
+  res.status(404).json({ message: "We couldn't find what you were looking for 😞" });
 });
 
 app.use(function (err, req, res, next) {
