@@ -1,8 +1,6 @@
-import React from "react";
 import Flashcard from "../Flashcard";
 
 function Body({ questions }) {
-  console.log(questions);
   return (
     <div>
       <nav className="navBar">
@@ -10,9 +8,8 @@ function Body({ questions }) {
         <button className="cssButton">CSS</button>
         <button className="jsButton">JavaScript</button>
       </nav>
-
       <h2 className="flipComment">Flip the card to see the correct answer!</h2>
-      <Flashcard />
+      {questions.length > 0 ? <Flashcard questions={questions} /> : "Loading..."}
     </div>
   );
 }

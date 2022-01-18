@@ -5,16 +5,16 @@ import Footer from "../Footer/Footer";
 
 function HTML() {
   const [questions, setQuestions] = useState([]);
-  async function getHTMLQuestions() {
-    const response = await fetch(
-      "https://flashcard-application1.herokuapp.com/html"
-    );
-    const data = await response.json();
-    setQuestions(data);
-  }
+
   useEffect(() => {
+    async function getHTMLQuestions() {
+      const response = await fetch("https://flashcard-application1.herokuapp.com/html");
+      const data = await response.json();
+      setQuestions(data.payload);
+    }
     getHTMLQuestions();
   }, []);
+
   return (
     <div>
       <Header />

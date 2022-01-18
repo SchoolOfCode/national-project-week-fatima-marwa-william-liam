@@ -1,8 +1,7 @@
 import React from "react";
 import "./App.css";
-import {useState, useEffect} from "react";
-import Flashcard from "../Flashcard/index";
-import Home from "../Home/index" ;
+import { useState, useEffect } from "react";
+import Home from "../Home/index";
 import HTML from "../HTML/index";
 import CSS from "../CSS/index";
 import JS from "../JS/index";
@@ -11,16 +10,19 @@ import JS from "../JS/index";
 
 function App() {
   const [isFlipped, setIsFlipped] = useState(false);
-function toggleFlipped(){
-  setIsFlipped(!isFlipped);
-}
 
-  return <div className="App">
-    <Home />
-    <HTML />
-    <CSS />
-    <JS />
-  </div>;
+  function toggleFlipped() {
+    setIsFlipped(!isFlipped);
+  }
+
+  return (
+    <div className="App">
+      <Home />
+      <HTML />
+      <CSS />
+      <JS />
+    </div>
+  );
 }
 
 export default App;
