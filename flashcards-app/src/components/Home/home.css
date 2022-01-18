@@ -1,0 +1,45 @@
+#Home {
+  background-color: #383838;
+  height: 100vh;
+  color: white;
+}
+
+.home-text {
+  margin-bottom: 2rem;
+}
+
+.home-logo {
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.cta {
+  margin: 2rem;
+}
+
+.categories {
+  display: grid;
+  row-gap: 2rem;
+}
+
+.btn {
+  width: 60%;
+  padding: 2rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.HTML {
+  background-color: hsl(15, 75%, 50%);
+}
+
+.CSS {
+  background-color: #07a7da;
+}
+
+.JS {
+  background-color: hsl(53, 100%, 63%);
+  color: black;
+}

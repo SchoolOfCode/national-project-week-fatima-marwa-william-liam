@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+  margin-bottom: 3rem;
+  padding: 2rem;
+}
+
+.Logo {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "Noto Sans Mono", monospace;
+}
+
+#login-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #86ad54;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 100px;
+}

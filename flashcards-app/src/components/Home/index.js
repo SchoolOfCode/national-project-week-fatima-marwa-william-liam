@@ -1,27 +1,29 @@
-import React from "react";
+import "./home.css";
 import Header from "../Header/Header.js";
 import Footer from "../Footer/Footer.js";
 import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <div>
+    <div id="Home">
       <Header />
-      <h2>Revision made easy with</h2>
-      <h1>DevCards.</h1>
-      <h3>Choose a category to see relevant question/answer cards.</h3>
-      <div className="options">
+      <div className="home-text">
+        <h2>
+          Revision made easy with<span className="home-logo"> DevCards.</span>
+        </h2>
+        <h3 className="cta">Choose a category to see relevant question/answer cards.</h3>
+      </div>
+      <div className="categories">
         <Link to="/html">
-          <button className="HTML">HTML</button>
+          <button className="btn HTML">HTML</button>
         </Link>
         <Link to="/css">
-          <button className="CSS">CSS</button>
+          <button className="btn CSS">CSS</button>
         </Link>
         <Link to="/js">
-          <button className="JS">JavaScript</button>
+          <button className="btn JS">JavaScript</button>
         </Link>
       </div>
-      <Footer />
     </div>
   );
 }

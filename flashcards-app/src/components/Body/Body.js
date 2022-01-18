@@ -1,9 +1,10 @@
+import "./body.css";
 import { Link } from "react-router-dom";
 import Flashcard from "../Flashcard";
 
 function Body({ questions, navButton1, navButton2, navButton3 }) {
   return (
-    <div>
+    <div id="body">
       <nav className="navBar">
         <Link to="/">
           <button className="home-button">{navButton1}</button>
