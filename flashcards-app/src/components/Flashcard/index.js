@@ -10,11 +10,13 @@ function Flashcard({ questions }) {
   }
 
   function nextQuestion() {
+    setIsFlipped(false);
     if (index + 1 >= questions.length) return;
     else setIndex(index + 1);
   }
 
   function previousQuestion() {
+    setIsFlipped(false);
     if (index - 1 <= 0) return;
     else setIndex(index - 1);
   }
@@ -29,7 +31,7 @@ function Flashcard({ questions }) {
       <button onClick={previousQuestion}>Prev</button>
       <button onClick={toggleFlipped}>Flip</button>
       <button onClick={nextQuestion}>Next</button>
-      {/* <h3 className="questionCount"></h3> */}
+      <h3 className="questionCount">Question: {index + 1}/40</h3>
     </div>
   );
 }
