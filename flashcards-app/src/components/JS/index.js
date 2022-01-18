@@ -19,8 +19,13 @@ function JS() {
 
   return (
     <div>
-      <Header />
-      <Body questions={questions} />
+      <Header title="JavaScript" />
+      <Body
+        questions={questions}
+        navButton1="HOME"
+        navButton2="HTML"
+        navButton3="CSS"
+      />
       <Footer />
     </div>
   );

@@ -19,8 +19,13 @@ function CSS() {
 
   return (
     <div>
-      <Header />
-      <Body questions={questions} />
+      <Header title="CSS (Cascading Style Sheets)" />
+      <Body
+        questions={questions}
+        navButton1="HOME"
+        navButton2="HTML"
+        navButton3="JS"
+      />
       <Footer />
     </div>
   );

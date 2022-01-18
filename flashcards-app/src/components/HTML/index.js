@@ -8,7 +8,9 @@ function HTML() {
 
   useEffect(() => {
     async function getHTMLQuestions() {
-      const response = await fetch("https://flashcard-application1.herokuapp.com/html");
+      const response = await fetch(
+        "https://flashcard-application1.herokuapp.com/html"
+      );
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -17,8 +19,13 @@ function HTML() {
 
   return (
     <div>
-      <Header />
-      <Body questions={questions} />
+      <Header title="HTML (HyperText Markup Language)" />
+      <Body
+        questions={questions}
+        navButton1="HOME"
+        navButton2="CSS"
+        navButton3="JS"
+      />
       <Footer />
     </div>
   );

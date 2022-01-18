@@ -1,11 +1,11 @@
 import React from "react";
 
-function Header() {
+function Header({ title }) {
   return (
     <div>
       <h2 className="Logo">DevCards</h2>
       <button className="login">Login</button>
-      <h1 className="title">HTML (HyperText Markup Language)</h1>
+      <h1 className="title">{title}</h1>
     </div>
   );
 }
