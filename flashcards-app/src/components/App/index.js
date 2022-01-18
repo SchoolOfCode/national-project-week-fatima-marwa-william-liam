@@ -6,8 +6,6 @@ import HTML from "../HTML/index";
 import CSS from "../CSS/index";
 import JS from "../JS/index";
 
-//const question = { question: "What does HTML stand for?", answer: "HyperText Markup Language"};
-
 function App() {
   return (
     <div className="App">
