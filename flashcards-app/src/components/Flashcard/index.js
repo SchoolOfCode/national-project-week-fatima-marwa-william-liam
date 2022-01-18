@@ -17,14 +17,15 @@ function Flashcard({ questions }) {
 
   function previousQuestion() {
     setIsFlipped(false);
-    if (index - 1 <= 0) return;
+    if (index - 1 < 0) return;
     else setIndex(index - 1);
   }
 
   return (
     <div>
       <div className="container">
-        <h2 className="questions">
+        <h2 className="question-title">{isFlipped ? "Answer:" : "Question:"}</h2>
+        <h2 className="question-body">
           {isFlipped ? questions[index].answer : questions[index].question}
         </h2>
       </div>
