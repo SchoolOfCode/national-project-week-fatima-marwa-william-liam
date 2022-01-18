@@ -3,9 +3,9 @@ import React from "react";
 function Header() {
   return (
     <div>
-      <h1 className="Logo">DevCards</h1>
+      <h2 className="Logo">DevCards</h2>
       <button className="login">Login</button>
-      <title className="title">HTML (HyperText Markup Language)</title>
+      <h1 className="title">HTML (HyperText Markup Language)</h1>
     </div>
   );
 }
