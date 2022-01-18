@@ -11,8 +11,6 @@ import JS from "../JS/index";
 
 function App() {
   const [isFlipped, setIsFlipped] = useState(false);
-const [questions, setQuestions] = useState([]);
-
 function toggleFlipped(){
   setIsFlipped(!isFlipped);
 }

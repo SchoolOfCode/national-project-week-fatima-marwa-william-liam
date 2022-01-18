@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../Header/Header";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
 
 function HTML() {
+  const [questions, setQuestions] = useState([]);
+  async function getHTMLQuestions() {
+    const response = await fetch(
+      "https://flashcard-application1.herokuapp.com/html"
+    );
+    const data = await response.json();
+    setQuestions(data);
+  }
+  useEffect(() => {
+    getHTMLQuestions();
+  }, []);
   return (
     <div>
       <Header />
-      <Body />
+      <Body questions={questions} />
       <Footer />
     </div>
   );

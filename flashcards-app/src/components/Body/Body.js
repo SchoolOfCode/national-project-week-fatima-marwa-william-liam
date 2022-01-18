@@ -1,7 +1,8 @@
 import React from "react";
 import Flashcard from "../Flashcard";
 
-function Body() {
+function Body({ questions }) {
+  console.log(questions);
   return (
     <div>
       <nav className="navBar">
