@@ -3,11 +3,15 @@ import "./flashcard.css";
 
 function Flashcard({ questions }) {
   const [index, setIndex] = useState(0);
-
   const [isFlipped, setIsFlipped] = useState(false);
+  const [flip, setFlip] = useState(false);
 
   function toggleFlipped() {
     setIsFlipped(!isFlipped);
+    setFlip(true);
+    setTimeout(() => {
+      setFlip(false);
+    }, 500);
   }
 
   function nextQuestion() {
@@ -24,10 +28,8 @@ function Flashcard({ questions }) {
 
   return (
     <div>
-      <div className="container">
-        <h2 className="question-title">
-          {isFlipped ? "Answer:" : "Question:"}
-        </h2>
+      <div onClick={() => setFlip(!flip)} className={`container ${flip ? "flip" : ""}`}>
+        <h2 className="question-title">{isFlipped ? "Answer:" : "Question:"}</h2>
         <h2 className="question-body">
           {isFlipped ? questions[index].answer : questions[index].question}
         </h2>
@@ -51,8 +53,3 @@ function Flashcard({ questions }) {
 }
 
 export default Flashcard;
-
-/* <div id="Flashcard">
-<h3>{isFlipped ? "Answer" : "Question"}</h3>
-<p>{isFlipped ? answer : question}</p>
-</div> */
