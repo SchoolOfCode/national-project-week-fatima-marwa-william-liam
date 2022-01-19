@@ -5,6 +5,7 @@ import Home from "../Home/index";
 import HTML from "../HTML/index";
 import CSS from "../CSS/index";
 import JS from "../JS/index";
+import Notes from "../Notes";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/html" element={<HTML />} />
         <Route path="/css" element={<CSS />} />
         <Route path="/js" element={<JS />} />
+        <Route path="/notes" element={<Notes />} />
       </Routes>
     </div>
   );

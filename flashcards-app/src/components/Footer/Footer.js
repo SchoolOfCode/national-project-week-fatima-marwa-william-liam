@@ -1,11 +1,13 @@
 import React from "react";
 import "./footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
     <div>
-      <img className="image-logo" />
-      <button className="btn notes-btn">Notes</button>
+      <Link to="/notes">
+        <button className="btn notes-btn">Notes</button>
+      </Link>
     </div>
   );
 }
