@@ -22,9 +22,9 @@ function JS() {
   return (
     <div>
       <Header
-        id="title-dark"
-        style={{ backgroundColor: "var(--JS-clr)" }}
+        style={{ backgroundColor: "var(--JS-clr)"}}
         title="JavaScript"
+        title_id="title-dark"
       />
       <nav className="navBar">
         <Link to="/">
