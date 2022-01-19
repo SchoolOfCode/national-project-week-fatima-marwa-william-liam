@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+  margin: 2rem;
+  padding: 3rem 1rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.question-count {
+  position: relative;
+  bottom: 20px;
+  color: white;
+}
+
+.control-btns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 0rem 2rem;
+  justify-content: center;
+}
+
+.prev-btn {
+  grid-column: 1;
+  background-color: green;
+  width: 100%;
+  font-size: 1.25rem;
+}
+
+.flip-btn {
+  grid-column: 2/4;
+  width: 100%;
+  background-color: var(--HTML-clr);
+  font-size: 1.25rem;
+}
+
+.next-btn {
+  grid-column: 4;
+  background-color: green;
+  width: 100%;
+  font-size: 1.25rem;
+}

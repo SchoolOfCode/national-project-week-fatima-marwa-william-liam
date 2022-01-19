@@ -8,12 +8,17 @@
   --HTML-clr: #df5020;
   --CSS-clr: #07a7da;
   --JS-clr: #ffe942;
+  --bg-clr: #383838;
 }
 
 .App {
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+body {
+  background-color: var(--bg-clr);
 }
 
 .title {

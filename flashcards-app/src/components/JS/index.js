@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
+import "./js.css";
 
 function JS() {
   const [questions, setQuestions] = useState([]);
 
   useEffect(() => {
     async function getJSQuestions() {
-      const response = await fetch("https://flashcard-application1.herokuapp.com/js");
+      const response = await fetch(
+        "https://flashcard-application1.herokuapp.com/js"
+      );
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -18,7 +21,11 @@ function JS() {
 
   return (
     <div>
-      <Header style={{ backgroundColor: "var(--JS-clr)" }} title="JavaScript" />
+      <Header
+        id="title-dark"
+        style={{ backgroundColor: "var(--JS-clr)" }}
+        title="JavaScript"
+      />
       <nav className="navBar">
         <Link to="/">
           <button className="btn home-btn">HOME</button>

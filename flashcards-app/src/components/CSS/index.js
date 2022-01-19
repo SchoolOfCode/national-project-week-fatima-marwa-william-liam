@@ -9,7 +9,9 @@ function CSS() {
 
   useEffect(() => {
     async function getCSSQuestions() {
-      const response = await fetch("https://flashcard-application1.herokuapp.com/css");
+      const response = await fetch(
+        "https://flashcard-application1.herokuapp.com/css"
+      );
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -18,7 +20,11 @@ function CSS() {
 
   return (
     <div>
-      <Header style={{ backgroundColor: "var(--CSS-clr)" }} title="CSS" />
+      <Header
+        style={{ backgroundColor: "var(--CSS-clr)" }}
+        title="CSS"
+        subtitle="(Cascading Style Sheets)"
+      />
       <nav className="navBar">
         <Link to="/">
           <button className="btn home-btn">HOME</button>

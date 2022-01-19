@@ -23,3 +23,11 @@
   padding: 0.25rem 0.75rem;
   border-radius: 100px;
 }
+
+.title {
+  margin-top: 1rem;
+}
+
+#title-dark {
+  color: black;
+}
