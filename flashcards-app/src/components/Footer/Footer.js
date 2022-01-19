@@ -1,10 +1,35 @@
-import React from "react";
+import { useState } from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
 
 function Footer() {
+  const [text, setText] = useState("");
+
+  function updateText(e) {
+    setText(e.target.value);
+  }
+
+  async function handleSubmit(e) {
+    const response = await fetch(
+      "https://flashcard-application1.herokuapp.com/notes",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: "Bootcamper", note: text }),
+      }
+    );
+    const data = await response.json();
+    console.log(data);
+  }
+
   return (
     <div>
+      <form onSubmit={handleSubmit}>
+        <input onChange={updateText} type="text" />
+      </form>
       <Link to="/notes">
         <button className="btn notes-btn">Notes</button>
       </Link>
