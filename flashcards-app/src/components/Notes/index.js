@@ -1,9 +1,14 @@
 import React from "react";
+import Header from "../Header/Header";
 
 function Notes() {
   return (
     <div>
-      <h1>This page is for notes</h1>
+      <Header
+        style={{ backgroundColor: "var(--NOTES-clr)" }}
+        title="NOTES"
+        title_id="title-dark"
+      />
     </div>
   );
 }
