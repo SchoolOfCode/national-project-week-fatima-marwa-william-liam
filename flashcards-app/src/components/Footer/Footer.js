@@ -10,19 +10,18 @@ function Footer() {
   }
 
   async function handleSubmit(e) {
-    const response = await fetch(
-      "https://flashcard-application1.herokuapp.com/notes",
-      {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username: "Bootcamper", note: text }),
-      }
-    );
+    e.preventDefault();
+    const response = await fetch("https://flashcard-application1.herokuapp.com/notes", {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username: "Bootcamper", note: text }),
+    });
     const data = await response.json();
     console.log(data);
+    e.target[0].value = "";
   }
 
   return (
