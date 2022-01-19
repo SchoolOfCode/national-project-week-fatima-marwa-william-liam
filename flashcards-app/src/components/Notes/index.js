@@ -17,6 +17,10 @@ function Notes() {
     getNotes();
   }, []);
 
+  function deleteNote(index) {
+    setNotes([...notes.slice(0, index), ...notes.slice(index + 1)]);
+  }
+
   return (
     <div>
       <Header
@@ -25,7 +29,7 @@ function Notes() {
         title_id="title-dark"
         Logo_id="Logo-dark"
       />
-      <NoteList notes={notes} />
+      <NoteList notes={notes} deleteNote={deleteNote} />
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import React from "react";
 import ListItem from "../ListItem";
 
-function NoteList({ notes }) {
+function NoteList({ notes, deleteNote }) {
   return (
     <ol>
-      {notes.map((note) => {
-        return <ListItem note={note} />;
+      {notes.map((note, index) => {
+        return <ListItem note={note} index={index} deleteNote={deleteNote} />;
       })}
     </ol>
   );
