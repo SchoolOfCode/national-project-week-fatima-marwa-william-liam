@@ -4,9 +4,14 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   const [text, setText] = useState("");
+  const [isVisible, setIsVisible] = useState(false);
 
   function updateText(e) {
     setText(e.target.value);
+  }
+
+  function toggleVisibility() {
+    setIsVisible(!isVisible);
   }
 
   async function handleSubmit(e) {
@@ -22,13 +27,38 @@ function Footer() {
     const data = await response.json();
     console.log(data);
     e.target[0].value = "";
+    toggleVisibility();
   }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-        <input onChange={updateText} type="text" />
-      </form>
+      {isVisible ? (
+        <></>
+      ) : (
+        <button onClick={toggleVisibility} className="btn add-note-btn">
+          Add Note
+        </button>
+      )}
+      {isVisible ? (
+        <form id="note-input" className="note-input-form" onSubmit={handleSubmit}>
+          <button onClick={toggleVisibility} className="btn cancel-btn">
+            X
+          </button>
+          <textarea
+            className="note-text-field"
+            onChange={updateText}
+            form="note-input"
+            maxLength={100}
+            required
+            placeholder="Enter your note..."
+          />
+          <button className="btn submit-btn" type="submit">
+            Submit
+          </button>
+        </form>
+      ) : (
+        <></>
+      )}
       <Link to="/notes">
         <button className="btn notes-btn">Notes</button>
       </Link>

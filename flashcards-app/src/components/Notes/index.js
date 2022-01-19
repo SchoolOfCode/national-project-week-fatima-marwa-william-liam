@@ -8,9 +8,7 @@ function Notes() {
 
   useEffect(() => {
     async function getNotes() {
-      const response = await fetch(
-        "https://flashcard-application1.herokuapp.com/notes"
-      );
+      const response = await fetch("https://flashcard-application1.herokuapp.com/notes");
       const data = await response.json();
       setNotes(data.payload);
     }
@@ -21,6 +19,10 @@ function Notes() {
     setNotes([...notes.slice(0, index), ...notes.slice(index + 1)]);
   }
 
+  function goBack() {
+    window.history.back();
+  }
+
   return (
     <div>
       <Header
@@ -29,6 +31,7 @@ function Notes() {
         title_id="title-dark"
         Logo_id="Logo-dark"
       />
+      <button onClick={goBack}>Back</button>
       <NoteList notes={notes} deleteNote={deleteNote} />
     </div>
   );
