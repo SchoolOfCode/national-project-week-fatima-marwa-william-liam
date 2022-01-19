@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
@@ -8,9 +9,7 @@ function HTML() {
 
   useEffect(() => {
     async function getHTMLQuestions() {
-      const response = await fetch(
-        "https://flashcard-application1.herokuapp.com/html"
-      );
+      const response = await fetch("https://flashcard-application1.herokuapp.com/html");
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -19,13 +18,23 @@ function HTML() {
 
   return (
     <div>
-      <Header title="HTML (HyperText Markup Language)" />
-      <Body
-        questions={questions}
-        navButton1="HOME"
-        navButton2="CSS"
-        navButton3="JS"
+      <Header
+        style={{ backgroundColor: "var(--HTML-clr)" }}
+        title="HTML"
+        subtitle="(HyperText Markup Language)"
       />
+      <nav className="navBar">
+        <Link to="/">
+          <button className="btn home-btn">HOME</button>
+        </Link>
+        <Link to="/css">
+          <button className="btn css-btn">CSS</button>
+        </Link>
+        <Link to="/js">
+          <button className="btn js-btn">JS</button>
+        </Link>
+      </nav>
+      <Body questions={questions} />
       <Footer />
     </div>
   );

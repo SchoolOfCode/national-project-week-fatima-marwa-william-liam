@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 import Body from "../Body/Body";
 import Footer from "../Footer/Footer";
@@ -8,9 +9,7 @@ function CSS() {
 
   useEffect(() => {
     async function getCSSQuestions() {
-      const response = await fetch(
-        "https://flashcard-application1.herokuapp.com/css"
-      );
+      const response = await fetch("https://flashcard-application1.herokuapp.com/css");
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -19,13 +18,19 @@ function CSS() {
 
   return (
     <div>
-      <Header title="CSS (Cascading Style Sheets)" />
-      <Body
-        questions={questions}
-        navButton1="HOME"
-        navButton2="HTML"
-        navButton3="JS"
-      />
+      <Header style={{ backgroundColor: "var(--CSS-clr)" }} title="CSS" />
+      <nav className="navBar">
+        <Link to="/">
+          <button className="btn home-btn">HOME</button>
+        </Link>
+        <Link to="/html">
+          <button className="btn html-btn">HTML</button>
+        </Link>
+        <Link to="/js">
+          <button className="btn js-btn">JS</button>
+        </Link>
+      </nav>
+      <Body questions={questions} />
       <Footer />
     </div>
   );

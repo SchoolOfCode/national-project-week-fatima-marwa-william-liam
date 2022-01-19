@@ -14,13 +14,13 @@ function Home() {
       </div>
       <div className="categories">
         <Link to="/html">
-          <button className="btn HTML">HTML</button>
+          <button className="btn-lrg HTML">HTML</button>
         </Link>
         <Link to="/css">
-          <button className="btn CSS">CSS</button>
+          <button className="btn-lrg CSS">CSS</button>
         </Link>
         <Link to="/js">
-          <button className="btn JS">JavaScript</button>
+          <button className="btn-lrg JS">JavaScript</button>
         </Link>
       </div>
     </div>

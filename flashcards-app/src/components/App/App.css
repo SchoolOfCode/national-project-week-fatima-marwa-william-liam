@@ -4,8 +4,54 @@
   font-family: "Roboto", sans-serif;
 }
 
+:root {
+  --HTML-clr: #df5020;
+  --CSS-clr: #07a7da;
+  --JS-clr: #ffe942;
+}
+
 .App {
   display: grid;
   place-items: center;
   text-align: center;
+}
+
+.title {
+  color: white;
+}
+
+.subtitle {
+  color: white;
+  font-size: 1rem;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  width: 60px;
+  height: 35px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.home-btn {
+  background-color: #858585;
+}
+
+.html-btn {
+  background-color: var(--HTML-clr);
+}
+
+.css-btn {
+  background-color: var(--CSS-clr);
+}
+
+.js-btn {
+  background-color: var(--JS-clr);
+  color: black;
 }

@@ -21,7 +21,7 @@
   row-gap: 2rem;
 }
 
-.btn {
+.btn-lrg {
   width: 60%;
   padding: 2rem;
   font-weight: bold;
@@ -32,14 +32,14 @@
 }
 
 .HTML {
-  background-color: hsl(15, 75%, 50%);
+  background-color: var(--HTML-clr);
 }
 
 .CSS {
-  background-color: #07a7da;
+  background-color: var(--CSS-clr);
 }
 
 .JS {
-  background-color: hsl(53, 100%, 63%);
+  background-color: var(--JS-clr);
   color: black;
 }
