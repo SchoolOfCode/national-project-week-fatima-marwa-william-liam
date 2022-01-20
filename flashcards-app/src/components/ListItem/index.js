@@ -1,4 +1,5 @@
 import React from "react";
+import "./ListItem.css";
 
 function ListItem({ note, deleteNote, index }) {
   async function handleDelete() {
@@ -13,7 +14,7 @@ function ListItem({ note, deleteNote, index }) {
     console.log(data);
   }
   return (
-    <li>
+    <li className="note-container">
       <h2>{note.username}</h2>
       <h2>{note.note}</h2>
       <button onClick={handleDelete} className="delete-btn">

@@ -31,7 +31,7 @@ function Notes() {
         title_id="title-dark"
         Logo_id="Logo-dark"
       />
-      <button onClick={goBack}>Back</button>
+      <button className="btn back-btn" onClick={goBack}>Back</button>
       <NoteList notes={notes} deleteNote={deleteNote} />
     </div>
   );
