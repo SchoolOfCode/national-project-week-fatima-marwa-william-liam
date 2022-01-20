@@ -6,12 +6,12 @@ import Footer from "../Footer/Footer";
 
 function CSS() {
   const [questions, setQuestions] = useState([]);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
 
   useEffect(() => {
     async function getCSSQuestions() {
-      const response = await fetch(
-        "https://flashcard-application1.herokuapp.com/css"
-      );
+      const response = await fetch("https://flashcard-application1.herokuapp.com/css");
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -36,8 +36,14 @@ function CSS() {
           <button className="btn js-btn">JS</button>
         </Link>
       </nav>
-      <Body questions={questions} />
-      <Footer />
+      <Body
+        questions={questions}
+        correctCount={correctCount}
+        setCorrectCount={setCorrectCount}
+        incorrectCount={incorrectCount}
+        setIncorrectCount={setIncorrectCount}
+      />
+      <Footer correctCount={correctCount} incorrectCount={incorrectCount} />
     </div>
   );
 }

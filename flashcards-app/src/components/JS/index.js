@@ -7,12 +7,12 @@ import "./js.css";
 
 function JS() {
   const [questions, setQuestions] = useState([]);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
 
   useEffect(() => {
     async function getJSQuestions() {
-      const response = await fetch(
-        "https://flashcard-application1.herokuapp.com/js"
-      );
+      const response = await fetch("https://flashcard-application1.herokuapp.com/js");
       const data = await response.json();
       setQuestions(data.payload);
     }
@@ -22,7 +22,7 @@ function JS() {
   return (
     <div>
       <Header
-        style={{ backgroundColor: "var(--JS-clr)"}}
+        style={{ backgroundColor: "var(--JS-clr)" }}
         title="JavaScript"
         title_id="title-dark"
       />
@@ -37,8 +37,14 @@ function JS() {
           <button className="btn css-btn">CSS</button>
         </Link>
       </nav>
-      <Body questions={questions} />
-      <Footer />
+      <Body
+        questions={questions}
+        correctCount={correctCount}
+        setCorrectCount={setCorrectCount}
+        incorrectCount={incorrectCount}
+        setIncorrectCount={setIncorrectCount}
+      />
+      <Footer correctCount={correctCount} incorrectCount={incorrectCount} />
     </div>
   );
 }

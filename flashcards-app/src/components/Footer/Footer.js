@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
 
-function Footer() {
+function Footer({ correctCount, incorrectCount }) {
   const [text, setText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -32,6 +32,16 @@ function Footer() {
 
   return (
     <div>
+      <div className="counter-container">
+        <div className="correct">
+          <h3>Correct</h3>
+          <h4>{correctCount}</h4>
+        </div>
+        <div className="incorrect">
+          <h3>Incorrect</h3>
+          <h4>{incorrectCount}</h4>
+        </div>
+      </div>
       {isVisible ? (
         <></>
       ) : (

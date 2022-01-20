@@ -1,17 +1,20 @@
 import { useState } from "react";
 import "./flashcard.css";
 
-function Flashcard({ questions }) {
+function Flashcard({
+  questions,
+  correctCount,
+  setCorrectCount,
+  incorrectCount,
+  setIncorrectCount,
+}) {
   const [index, setIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
-  const [flip, setFlip] = useState(false);
+  const [flipAnimation, setFlipAnimation] = useState(false);
 
   function toggleFlipped() {
     setIsFlipped(!isFlipped);
-    setFlip(true);
-    setTimeout(() => {
-      setFlip(false);
-    }, 500);
+    setFlipAnimation(true);
   }
 
   function nextQuestion() {
@@ -26,13 +29,35 @@ function Flashcard({ questions }) {
     else setIndex(index - 1);
   }
 
+  function addCorrect() {
+    if (correctCount + incorrectCount === questions.length) return;
+    setCorrectCount(correctCount + 1);
+    nextQuestion();
+  }
+  function addIncorrect() {
+    if (correctCount + incorrectCount === questions.length) return;
+    setIncorrectCount(incorrectCount + 1);
+    nextQuestion();
+  }
+
   return (
     <div>
-      <div onClick={() => setFlip(!flip)} className={`container ${flip ? "flip" : ""}`}>
+      <div
+        className={`container ${flipAnimation ? "flip" : ""}`}
+        onAnimationEnd={() => setFlipAnimation(false)}
+      >
         <h2 className="question-title">{isFlipped ? "Answer:" : "Question:"}</h2>
         <h2 className="question-body">
           {isFlipped ? questions[index].answer : questions[index].question}
         </h2>
+        <div className="check-answers">
+          <button onClick={addCorrect}>
+            <i className="fas fa-check"></i>
+          </button>
+          <button onClick={addIncorrect}>
+            <i className="fas fa-times"></i>
+          </button>
+        </div>
       </div>
       <h3 className="question-count">
         Question: {index + 1}/{questions.length}

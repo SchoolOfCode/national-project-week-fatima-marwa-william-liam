@@ -19,6 +19,7 @@
 }
 
 body {
+  touch-action: manipulation;
   background-color: var(--bg-clr);
 }
 

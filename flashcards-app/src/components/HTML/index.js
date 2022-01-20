@@ -6,6 +6,8 @@ import Footer from "../Footer/Footer";
 
 function HTML() {
   const [questions, setQuestions] = useState([]);
+  const [correctCount, setCorrectCount] = useState(0);
+  const [incorrectCount, setIncorrectCount] = useState(0);
 
   useEffect(() => {
     async function getHTMLQuestions() {
@@ -34,8 +36,14 @@ function HTML() {
           <button className="btn js-btn">JS</button>
         </Link>
       </nav>
-      <Body questions={questions} />
-      <Footer />
+      <Body
+        questions={questions}
+        correctCount={correctCount}
+        setCorrectCount={setCorrectCount}
+        incorrectCount={incorrectCount}
+        setIncorrectCount={setIncorrectCount}
+      />
+      <Footer correctCount={correctCount} incorrectCount={incorrectCount} />
     </div>
   );
 }
