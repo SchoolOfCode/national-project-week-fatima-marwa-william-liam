@@ -36,6 +36,7 @@ function Notes() {
       <button className="btn back-btn" onClick={goBack}>
         <i className="fas fa-arrow-left"></i>
       </button>
+      <p className="camera-instructions">Click the camera for Flashcard snapshot.</p>
       <NoteList notes={notes} deleteNote={deleteNote} />
     </div>
   );

@@ -22,6 +22,9 @@ function ListItem({ note, deleteNote, index }) {
       <button onClick={handleDelete} className="btn delete-btn">
         <i className="fas fa-trash"></i>
       </button>
+      <button className="btn flashcard-btn">
+        <i className="fas fa-camera-retro"></i>
+      </button>
     </li>
   );
 }
