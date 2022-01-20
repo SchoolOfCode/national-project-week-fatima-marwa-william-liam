@@ -8,3 +8,12 @@
   background-color: #858585;
   margin-bottom: 1rem;
 }
+
+.username {
+  position: absolute;
+  right: 10px;
+  top: 17%;
+  color: white;
+  font-weight: bold;
+  opacity: 0.5;
+}

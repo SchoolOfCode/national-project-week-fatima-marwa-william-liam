@@ -15,7 +15,6 @@ function ListItem({ note, deleteNote, index }) {
   }
   return (
     <li className="note-container">
-      <h2>{note.username}</h2>
       <h2>{note.note}</h2>
       <button onClick={handleDelete} className="delete-btn">
         Delete

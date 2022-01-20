@@ -14,7 +14,9 @@
   font-family: "Noto Sans Mono", monospace;
 }
 
-#login-btn {
+#log-in-btn {
+  width: 62px;
+  height: 31px;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -22,8 +24,26 @@
   color: white;
   border: none;
   font-weight: bold;
-  padding: 0.25rem 0.75rem;
   border-radius: 100px;
+}
+
+#log-out-btn {
+  width: 62px;
+  height: 31px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgb(176, 0, 0);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 100px;
+  opacity: 0.5;
+  transition: opacity 250ms ease;
+}
+
+#log-out-btn:active {
+  opacity: 1;
 }
 
 .title {
