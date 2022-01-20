@@ -5,6 +5,7 @@
   border-radius: 10px;
   padding: 1rem;
   position: relative;
+  word-break: break-all;
 }
 .note-text {
   font-size: 1rem;
