@@ -21,7 +21,7 @@
   display: grid;
   place-items: center;
   color: rgb(81, 189, 81);
-  background-color: rgb(33, 32, 32);
+  background-color: white;
   border-radius: 5px;
   margin: 0.5rem;
   width: 80px;
@@ -30,8 +30,8 @@
 .incorrect-score {
   display: grid;
   place-items: center;
+  background-color: white;
   color: red;
-  background-color: rgb(33, 32, 32);
   border-radius: 5px;
   margin: 0.5rem;
   width: 80px;

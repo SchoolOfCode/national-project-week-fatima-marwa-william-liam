@@ -11,6 +11,8 @@ function Flashcard({
   const [index, setIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [flipAnimation, setFlipAnimation] = useState(false);
+  const [nextAnimation, setNextAnimation] = useState(false);
+  const [prevAnimation, setPrevAnimation] = useState(false);
 
   function toggleFlipped() {
     setIsFlipped(!isFlipped);
@@ -20,13 +22,19 @@ function Flashcard({
   function nextQuestion() {
     setIsFlipped(false);
     if (index + 1 >= questions.length) return;
-    else setIndex(index + 1);
+    else {
+      setIndex(index + 1);
+      setNextAnimation(true);
+    }
   }
 
   function previousQuestion() {
     setIsFlipped(false);
     if (index - 1 < 0) return;
-    else setIndex(index - 1);
+    else {
+      setIndex(index - 1);
+      setPrevAnimation(true);
+    }
   }
 
   function addCorrect() {
@@ -34,29 +42,39 @@ function Flashcard({
     setCorrectCount(correctCount + 1);
     nextQuestion();
   }
+
   function addIncorrect() {
     if (correctCount + incorrectCount === questions.length) return;
     setIncorrectCount(incorrectCount + 1);
     nextQuestion();
   }
 
+  function stopAnimation() {
+    setFlipAnimation(false);
+    setNextAnimation(false);
+    setPrevAnimation(false);
+  }
+
   return (
     <div>
       <div
-        className={`container ${flipAnimation ? "flip" : ""}`}
-        onAnimationEnd={() => setFlipAnimation(false)}
+        className={`container ${flipAnimation ? "flip" : ""} ${nextAnimation ? "next" : ""} ${
+          prevAnimation ? "prev" : ""
+        }`}
+        onAnimationEnd={stopAnimation}
       >
-        <h2 className="question-title">
-          {isFlipped ? "Answer:" : "Question:"}
-        </h2>
+        <h2 className="question-title">{isFlipped ? "Answer:" : "Question:"}</h2>
         <h2 className="question-body">
           {isFlipped ? questions[index].answer : questions[index].question}
         </h2>
         <div className="check-answers">
-          <button className="btn correct-btn" onClick={addCorrect}>
+          <button className={`btn correct-btn ${isFlipped ? "visible" : ""}`} onClick={addCorrect}>
             <i className="fas fa-check"></i>
           </button>
-          <button className="btn incorrect-btn" onClick={addIncorrect}>
+          <button
+            className={`btn incorrect-btn ${isFlipped ? "visible" : ""}`}
+            onClick={addIncorrect}
+          >
             <i className="fas fa-times"></i>
           </button>
         </div>

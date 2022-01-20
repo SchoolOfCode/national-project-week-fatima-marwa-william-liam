@@ -24,12 +24,16 @@
 }
 
 .correct-btn {
+  opacity: 0;
+  pointer-events: none;
   background-color: green;
   font-size: 1.25rem;
   width: 12.5%;
 }
 
 .incorrect-btn {
+  opacity: 0;
+  pointer-events: none;
   background-color: red;
   font-size: 1.25rem;
   width: 12.5%;
@@ -71,8 +75,19 @@
   font-size: 1.25rem;
 }
 
+.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
 .flip {
   animation: flip 250ms ease forwards;
+}
+.next {
+  animation: next 500ms ease forwards;
+}
+.prev {
+  animation: prev 500ms ease forwards;
 }
 
 @keyframes flip {
@@ -94,10 +109,34 @@
   50% {
     transform: translateX(150%);
   }
-  55% {
+  51% {
     transform: translateX(-150%);
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes prev {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-150%);
+  }
+  51% {
+    transform: translateX(150%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
