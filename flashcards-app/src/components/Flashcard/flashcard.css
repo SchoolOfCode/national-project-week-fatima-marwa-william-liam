@@ -9,13 +9,17 @@
   position: relative;
 }
 
+.question-body {
+  margin-top: 0.25rem;
+  font-size: 1.5rem;
+}
 .check-answers {
   position: absolute;
   display: flex;
   justify-content: space-between;
   width: 90%;
   left: 50%;
-  top: 1.25rem;
+  top: 0.75rem;
   transform: translate(-50%);
 }
 

@@ -36,8 +36,16 @@ function Footer({ correctCount, incorrectCount }) {
   return (
     <div>
       <div className="counter-container">
-        <h3>Correct: {correctCount}</h3>
-        <h3>Incorrect: {incorrectCount}</h3>
+        <div className="score-display">
+          <div className="correct">
+            <h3>Correct</h3>
+            <h4 className="correct-score">{correctCount}</h4>
+          </div>
+          <div className="incorrect">
+            <h3>Incorrect</h3>
+            <h4 className="incorrect-score">{incorrectCount}</h4>
+          </div>
+        </div>
       </div>
       {isVisible ? (
         <></>
