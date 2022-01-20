@@ -3,4 +3,33 @@
   margin: 1rem;
   list-style: none;
   border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+.note-text {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.delete-btn {
+  position: absolute;
+  top: 0;
+  right: -30%;
+  background-color: #b20000;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  position: absolute;
+  top: 0;
+  right: -15%;
+  background-color: #69a1c0;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  border-radius: 5px;
 }
