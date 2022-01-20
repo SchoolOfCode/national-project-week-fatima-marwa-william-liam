@@ -21,6 +21,7 @@
 body {
   touch-action: manipulation;
   background-color: var(--bg-clr);
+  overflow: hidden;
 }
 
 .title {
