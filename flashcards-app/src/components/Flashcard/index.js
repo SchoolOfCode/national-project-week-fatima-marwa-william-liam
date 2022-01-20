@@ -46,15 +46,17 @@ function Flashcard({
         className={`container ${flipAnimation ? "flip" : ""}`}
         onAnimationEnd={() => setFlipAnimation(false)}
       >
-        <h2 className="question-title">{isFlipped ? "Answer:" : "Question:"}</h2>
+        <h2 className="question-title">
+          {isFlipped ? "Answer:" : "Question:"}
+        </h2>
         <h2 className="question-body">
           {isFlipped ? questions[index].answer : questions[index].question}
         </h2>
         <div className="check-answers">
-          <button onClick={addCorrect}>
+          <button className="btn correct-btn" onClick={addCorrect}>
             <i className="fas fa-check"></i>
           </button>
-          <button onClick={addIncorrect}>
+          <button className="btn incorrect-btn" onClick={addIncorrect}>
             <i className="fas fa-times"></i>
           </button>
         </div>

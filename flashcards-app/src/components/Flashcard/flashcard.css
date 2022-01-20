@@ -6,6 +6,29 @@
   padding: 1rem;
   border-radius: 10px;
   background-color: white;
+  position: relative;
+}
+
+.check-answers {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  left: 50%;
+  top: 1.25rem;
+  transform: translate(-50%);
+}
+
+.correct-btn {
+  background-color: green;
+  font-size: 1.25rem;
+  width: 12.5%;
+}
+
+.incorrect-btn {
+  background-color: red;
+  font-size: 1.25rem;
+  width: 12.5%;
 }
 
 .question-count {

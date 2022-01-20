@@ -16,14 +16,17 @@ function Footer({ correctCount, incorrectCount }) {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const response = await fetch("https://flashcard-application1.herokuapp.com/notes", {
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ username: "Bootcamper", note: text }),
-    });
+    const response = await fetch(
+      "https://flashcard-application1.herokuapp.com/notes",
+      {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: "Bootcamper", note: text }),
+      }
+    );
     const data = await response.json();
     console.log(data);
     e.target[0].value = "";
@@ -33,14 +36,8 @@ function Footer({ correctCount, incorrectCount }) {
   return (
     <div>
       <div className="counter-container">
-        <div className="correct">
-          <h3>Correct</h3>
-          <h4>{correctCount}</h4>
-        </div>
-        <div className="incorrect">
-          <h3>Incorrect</h3>
-          <h4>{incorrectCount}</h4>
-        </div>
+        <h3>Correct: {correctCount}</h3>
+        <h3>Incorrect: {incorrectCount}</h3>
       </div>
       {isVisible ? (
         <></>
@@ -50,7 +47,11 @@ function Footer({ correctCount, incorrectCount }) {
         </button>
       )}
       {isVisible ? (
-        <form id="note-input" className="note-input-form" onSubmit={handleSubmit}>
+        <form
+          id="note-input"
+          className="note-input-form"
+          onSubmit={handleSubmit}
+        >
           <button onClick={toggleVisibility} className="btn cancel-btn">
             <i className="fas fa-times"></i>
           </button>
