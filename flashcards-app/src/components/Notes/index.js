@@ -34,7 +34,7 @@ function Notes() {
       />
       <p className="username">Username: Bootcamper</p>
       <button className="btn back-btn" onClick={goBack}>
-        Back
+        <i className="fas fa-arrow-left"></i>
       </button>
       <NoteList notes={notes} deleteNote={deleteNote} />
     </div>

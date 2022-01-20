@@ -42,7 +42,7 @@ function Footer() {
       {isVisible ? (
         <form id="note-input" className="note-input-form" onSubmit={handleSubmit}>
           <button onClick={toggleVisibility} className="btn cancel-btn">
-            X
+            <i className="fas fa-times"></i>
           </button>
           <textarea
             className="note-text-field"

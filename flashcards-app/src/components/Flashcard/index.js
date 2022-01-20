@@ -39,13 +39,13 @@ function Flashcard({ questions }) {
       </h3>
       <div className="control-btns">
         <button className="btn prev-btn" onClick={previousQuestion}>
-          Prev
+          <i className="fas fa-angle-left"></i>
         </button>
         <button className="btn flip-btn" onClick={toggleFlipped}>
-          Flip
+          <i className="fas fa-sync"></i>
         </button>
         <button className="btn next-btn" onClick={nextQuestion}>
-          Next
+          <i className="fas fa-angle-right"></i>
         </button>
       </div>
     </div>

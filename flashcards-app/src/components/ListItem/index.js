@@ -16,9 +16,11 @@ function ListItem({ note, deleteNote, index }) {
   return (
     <li className="note-container">
       <p className="note-text">{note.note}</p>
-      <button className="btn edit-btn"> ✏️ </button>
+      <button className="btn edit-btn">
+        <i className="fas fa-pen"></i>
+      </button>
       <button onClick={handleDelete} className="btn delete-btn">
-        🗑
+        <i className="fas fa-trash"></i>
       </button>
     </li>
   );
